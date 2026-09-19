@@ -1,0 +1,103 @@
+{
+  "Id": "a8f3b23c-7411-4712-9cfa-812398412490",
+  "Status": "OK",
+  "Invoices": [
+    {
+      "InvoiceID": "xero-inv-7001",
+      "InvoiceNumber": "INV-XERO-7001",
+      "Type": "ACCREC",
+      "Contact": {
+        "ContactID": "xero-cust-301",
+        "Name": "BluePeak Solar Energy Inc.",
+        "EmailAddress": "finance@bluepeaksolar.com",
+        "Phones": [
+          {
+            "PhoneType": "MOBILE",
+            "PhoneNumber": "+1-415-555-9281"
+          }
+        ]
+      },
+      "DateString": "2026-06-20T00:00:00",
+      "DueDateString": "2026-07-20T00:00:00",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "li-001",
+          "Description": "Commercial Inverter Installation & Wiring",
+          "UnitAmount": 6500.0,
+          "Quantity": 1.0,
+          "LineAmount": 6500.0
+        },
+        {
+          "LineItemID": "li-002",
+          "Description": "High-Voltage Safety Grid Inspection",
+          "UnitAmount": 1500.0,
+          "Quantity": 1.0,
+          "LineAmount": 1500.0
+        }
+      ],
+      "SubTotal": 8000.0,
+      "TotalTax": 0.0,
+      "Total": 8000.0,
+      "AmountDue": 8000.0,
+      "AmountPaid": 0.0,
+      "CurrencyCode": "USD"
+    },
+    {
+      "InvoiceID": "xero-inv-7002",
+      "InvoiceNumber": "INV-XERO-7002",
+      "Type": "ACCREC",
+      "Contact": {
+        "ContactID": "xero-cust-302",
+        "Name": "Silverline Architectural Studio",
+        "EmailAddress": "accounts@silverlinestudio.com",
+        "Phones": [
+          {
+            "PhoneType": "DEFAULT",
+            "PhoneNumber": "+1-206-555-8392"
+          }
+        ]
+      },
+      "DateString": "2026-08-10T00:00:00",
+      "DueDateString": "2026-09-02T00:00:00",
+      "Status": "AUTHORISED",
+      "LineItems": [
+        {
+          "Description": "3D CAD Rendering & Structural Blueprinting",
+          "UnitAmount": 3800.0,
+          "Quantity": 1.0,
+          "LineAmount": 3800.0
+        }
+      ],
+      "Total": 3800.0,
+      "AmountDue": 3800.0,
+      "CurrencyCode": "USD"
+    },
+    {
+      "InvoiceID": "xero-inv-7003",
+      "InvoiceNumber": "INV-XERO-7003",
+      "Type": "ACCREC",
+      "Contact": {
+        "ContactID": "xero-cust-303",
+        "Name": "Kestrel Digital Media",
+        "EmailAddress": "billing@kestreldigital.io"
+      },
+      "Date": "/Date(1789776000000+0000)/",
+      "DueDate": "/Date(1791072000000+0000)/",
+      "DueDateString": "2026-10-05T00:00:00",
+      "Status": "AUTHORISED",
+      "LineItems": [
+        {
+          "Description": "Social Media Ad Optimization Sprint",
+          "UnitAmount": 2500.0,
+          "Quantity": 1.0,
+          "LineAmount": 2500.0
+        }
+      ],
+      "Total": 2500.0,
+      "AmountDue": 2500.0,
+      "CurrencyCode": "USD"
+    }
+  ]
+}

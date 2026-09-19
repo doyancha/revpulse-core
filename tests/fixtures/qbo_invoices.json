@@ -1,0 +1,150 @@
+{
+  "QueryResponse": {
+    "Invoice": [
+      {
+        "Id": "1001",
+        "DocNumber": "INV-QBO-1001",
+        "TxnDate": "2026-07-15",
+        "DueDate": "2026-08-15",
+        "TotalAmt": 8500.0,
+        "Balance": 8500.0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "CustomerRef": {
+          "value": "CUST-501",
+          "name": "Apex Civil Contracting LLC"
+        },
+        "BillEmail": {
+          "Address": "billing@apexcivil.com"
+        },
+        "BillAddr": {
+          "Line1": "1200 Industrial Parkway",
+          "City": "Austin",
+          "CountrySubDivisionCode": "TX",
+          "PostalCode": "78701"
+        },
+        "Line": [
+          {
+            "Id": "1",
+            "LineNum": 1,
+            "Description": "Phase 1 Foundation Excavation & Grading",
+            "Amount": 5500.0,
+            "DetailType": "SalesItemLineDetail",
+            "SalesItemLineDetail": {
+              "ItemRef": {
+                "value": "ITEM-01",
+                "name": "Excavation Services"
+              },
+              "UnitPrice": 5500.0,
+              "Qty": 1
+            }
+          },
+          {
+            "Id": "2",
+            "LineNum": 2,
+            "Description": "Site Soil Testing & Compaction Analysis",
+            "Amount": 3000.0,
+            "DetailType": "SalesItemLineDetail",
+            "SalesItemLineDetail": {
+              "ItemRef": {
+                "value": "ITEM-02",
+                "name": "Testing & Analysis"
+              },
+              "UnitPrice": 3000.0,
+              "Qty": 1
+            }
+          }
+        ],
+        "CustomField": [
+          {
+            "DefinitionId": "1",
+            "Name": "Phone",
+            "Type": "StringType",
+            "StringValue": "+1-512-555-0199"
+          },
+          {
+            "DefinitionId": "2",
+            "Name": "PreferredChannel",
+            "Type": "StringType",
+            "StringValue": "EMAIL"
+          }
+        ]
+      },
+      {
+        "Id": "1002",
+        "DocNumber": "INV-QBO-1002",
+        "TxnDate": "2026-08-20",
+        "DueDate": "2026-09-04",
+        "TotalAmt": 4200.0,
+        "Balance": 4200.0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "CustomerRef": {
+          "value": "CUST-502",
+          "name": "Vanguard Logistics Partners"
+        },
+        "BillEmail": {
+          "Address": "accounts@vanguardlogistics.com"
+        },
+        "CustomField": [
+          {
+            "DefinitionId": "1",
+            "Name": "Phone",
+            "Type": "StringType",
+            "StringValue": "+1-214-555-0144"
+          },
+          {
+            "DefinitionId": "2",
+            "Name": "PreferredChannel",
+            "Type": "StringType",
+            "StringValue": "WHATSAPP"
+          }
+        ],
+        "Line": [
+          {
+            "Id": "1",
+            "LineNum": 1,
+            "Description": "Fleet Maintenance Consulting",
+            "Amount": 4200.0,
+            "DetailType": "SalesItemLineDetail"
+          }
+        ]
+      },
+      {
+        "Id": "1003",
+        "DocNumber": "INV-QBO-1003",
+        "TxnDate": "2026-09-10",
+        "DueDate": "2026-09-25",
+        "TotalAmt": 12000.0,
+        "Balance": 12000.0,
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "CustomerRef": {
+          "value": "CUST-503",
+          "name": "Summit Health Solutions"
+        },
+        "BillEmail": {
+          "Address": "invoices@summithealth.org"
+        },
+        "Line": [
+          {
+            "Id": "1",
+            "LineNum": 1,
+            "Description": "Enterprise Software Licensing - Q3",
+            "Amount": 12000.0,
+            "DetailType": "SalesItemLineDetail"
+          }
+        ]
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 3,
+    "totalCount": 3
+  }
+}

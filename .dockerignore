@@ -1,0 +1,41 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python byte-code, caches, and coverage
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.coverage.*
+
+# Version control
+.git/
+.gitignore
+
+# SQLite databases and local persistence
+*.db
+*.sqlite
+*.sqlite3
+revpulse.db
+
+# Environment and secret overrides
+.env
+.env.local
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Test outputs and exports
+audit_export_*.json
+*.log
+scratch/

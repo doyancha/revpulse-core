@@ -1,0 +1,70 @@
+services:
+  revpulse-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: revpulse-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - MODEL_NAME=${MODEL_NAME:-gemini-3.6-flash}
+      - DATABASE_URL=postgresql://revpulse_user:revpulse_pass@revpulse-db:5432/revpulse_db
+      - REDIS_URL=redis://revpulse-redis:6379/0
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      revpulse-db:
+        condition: service_healthy
+      revpulse-redis:
+        condition: service_healthy
+    networks:
+      - revpulse-net
+
+  revpulse-db:
+    image: postgres:16-alpine
+    container_name: revpulse-db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=revpulse_user
+      - POSTGRES_PASSWORD=revpulse_pass
+      - POSTGRES_DB=revpulse_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U revpulse_user -d revpulse_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    networks:
+      - revpulse-net
+
+  revpulse-redis:
+    image: redis:7-alpine
+    container_name: revpulse-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    networks:
+      - revpulse-net
+
+networks:
+  revpulse-net:
+    driver: bridge
+
+volumes:
+  pgdata:
+    driver: local
+  redisdata:
+    driver: local
