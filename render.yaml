@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: revpulse-core
+    runtime: docker
+    repo: https://github.com/doyancha/revpulse-core
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 8000
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_WHATSAPP_NUMBER
+        value: "+14155238886"
+      - key: DATABASE_URL
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: STRIPE_API_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
